@@ -1,0 +1,36 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+
+public class VierGewinnt {
+	
+	public static void main(String[] args) {
+
+		PlayMap.initialGrid();
+	
+	}
+	
+	public static void chooseRow() {
+		
+		JFrame meinJFrame = new JFrame();
+		meinJFrame.setTitle("Choose the Row");
+		JPanel panel = new JPanel();
+		
+		JButton button1 = new JButton(" Row 1");
+		
+		panel.add(button1);
+		
+		meinJFrame.add(panel);
+		
+		meinJFrame.pack();
+		
+		meinJFrame.setVisible(true);
+		
+		
+	}
+
+}
+	
+	

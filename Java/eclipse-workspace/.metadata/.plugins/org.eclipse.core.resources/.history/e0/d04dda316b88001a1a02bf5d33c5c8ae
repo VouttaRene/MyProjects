@@ -1,0 +1,6 @@
+
+public class MainScript {
+	
+	private PlayMap myPlayMap = new PlayMap();
+
+}

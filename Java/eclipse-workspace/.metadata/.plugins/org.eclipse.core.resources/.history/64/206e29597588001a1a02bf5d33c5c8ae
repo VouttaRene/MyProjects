@@ -1,0 +1,9 @@
+enum ActivePlayer { Player1, Player2}
+
+public class GameController {
+	
+
+
+}
+
+

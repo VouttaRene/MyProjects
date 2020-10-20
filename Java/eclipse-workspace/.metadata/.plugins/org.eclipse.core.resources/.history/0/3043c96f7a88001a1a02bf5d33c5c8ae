@@ -1,0 +1,65 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+
+
+
+public class RowListener extends JFrame implements ActionListener{
+
+	JButton buttonRow1;
+	JButton buttonRow2;
+	JButton buttonRow3;
+	JButton buttonRow4;
+	JButton buttonRow5;
+	JButton buttonRow6;
+	
+	JLabel label;
+	
+	JPanel panel;
+	
+	public RowListener() {
+		
+		this.setTitle("RowListener");
+		this.setSize(400,200);
+		panel = new JPanel();
+		
+		label = new JLabel();
+		
+		//Create 6 Buttons - for each Row one
+		buttonRow1 = new JButton("Row 1");
+		buttonRow2 = new JButton("Row 2");
+		buttonRow3 = new JButton("Row 3");
+		buttonRow4 = new JButton("Row 4");
+		buttonRow5 = new JButton("Row 5");
+		buttonRow6 = new JButton("Row 6");
+		
+		//Connect Buttons and the Panel
+		panel.add(buttonRow1);
+		panel.add(buttonRow2);
+		panel.add(buttonRow3);
+		panel.add(buttonRow4);
+		panel.add(buttonRow5);
+		panel.add(buttonRow6);
+		
+		
+		panel.add(label);
+		this.add(panel);
+	}
+	
+	public static void main(String[] args) {
+		
+		RowListener myRowListener = new RowListener();
+		myRowListener.setVisible(true);
+	}
+	
+	
+	public void actionPerformed(ActionEvent actionEvent) {
+		if(actionEvent.getSource() == this.buttonRow1) {
+			System.out.println("Row 1");
+		}
+		
+	}
+	
+	
+
+}

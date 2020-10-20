@@ -1,0 +1,16 @@
+
+public class MainScript {
+	
+	public void main(String[] args) {
+	
+	//PlayMap myPlayMap = new PlayMap();
+	
+	for(int i = 0; i <= 7; i++) {
+				
+				System.out.println("Reihe: " + i);
+	}
+	
+	//System.out.println(myPlayMap);
+	}
+
+}

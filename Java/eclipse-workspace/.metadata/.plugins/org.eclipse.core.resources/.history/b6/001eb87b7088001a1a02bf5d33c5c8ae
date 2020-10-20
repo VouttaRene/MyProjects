@@ -1,0 +1,46 @@
+
+public class VierGewinnt {
+	
+	public static void main(String[] args) {
+	
+		initialGrid();
+	
+	}
+	
+	public static void initialGrid() {
+		
+		String[][] initialGridArray = {	{"X","X","X","X","X","X"},		//first Row
+										{" "," "," "," "," "," "},		//second Row
+										{" "," "," "," "," "," "},		//third Row
+										{" "," "," "," "," "," "},		//fourth Row
+										{" "," "," "," "," "," "},		//fifth Row
+										{" "," "," "," "," "," "}};		//sixth Row
+		
+		//printing Initial Grid
+		System.out.println("+--------------+");
+		
+		
+		for(int i = 0; i < initialGridArray.length; ++i) {
+		 
+			System.out.print("|");
+			for(int j = 0; j < initialGridArray[i].length; ++j) {
+				
+				//System.out.print("|");
+				System.out.print(initialGridArray[i][j]);
+				//System.out.print("|");
+				
+			}
+			System.out.print("|");
+			System.out.println();
+			
+		}
+		
+		
+		
+		
+		//For Debugging Purposes
+		//System.out.println(initialGridArray.length);
+		//System.out.println(initialGridArray[1].length);
+	}
+
+}

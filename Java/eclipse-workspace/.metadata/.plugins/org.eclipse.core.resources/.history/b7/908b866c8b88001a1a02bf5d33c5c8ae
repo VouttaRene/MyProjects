@@ -1,0 +1,92 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+
+
+
+public class RowListener extends JFrame implements ActionListener{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	JButton buttonRow1;
+	JButton buttonRow2;
+	JButton buttonRow3;
+	JButton buttonRow4;
+	JButton buttonRow5;
+	JButton buttonRow6;
+	
+	JLabel label;
+	
+	JPanel panel;
+	
+	public RowListener() {
+		
+		this.setTitle("RowListener");
+		this.setSize(480,200);
+		panel = new JPanel();
+		
+		label = new JLabel();
+		
+		//Create 6 Buttons - for each Row one
+		buttonRow1 = new JButton("Row 1");
+		buttonRow1.addActionListener(this);
+		buttonRow2 = new JButton("Row 2");
+		buttonRow2.addActionListener(this);
+		buttonRow3 = new JButton("Row 3");
+		buttonRow3.addActionListener(this);
+		buttonRow4 = new JButton("Row 4");
+		buttonRow4.addActionListener(this);
+		buttonRow5 = new JButton("Row 5");
+		buttonRow5.addActionListener(this);
+		buttonRow6 = new JButton("Row 6");
+		buttonRow6.addActionListener(this);
+		
+		//Connect Buttons and the Panel
+		panel.add(buttonRow1);
+		panel.add(buttonRow2);
+		panel.add(buttonRow3);
+		panel.add(buttonRow4);
+		panel.add(buttonRow5);
+		panel.add(buttonRow6);
+		
+		
+		panel.add(label);
+		this.add(panel);
+	}
+	
+	public static void main() {
+		
+		RowListener myRowListener = new RowListener();
+		myRowListener.setVisible(true);
+	}
+	
+	
+	public void actionPerformed(ActionEvent actionEvent) {
+		
+		int chosenRow;
+		
+		if(actionEvent.getSource() == this.buttonRow1) {
+			label.setText("Button 1");
+			chosenRow = 1;
+		}else if(actionEvent.getSource() == this.buttonRow2) {
+			label.setText("Button 2");
+			chosenRow = 2;
+		}else if(actionEvent.getSource() == this.buttonRow3) {
+			label.setText("Button 3");
+			chosenRow = 3;
+		}else if(actionEvent.getSource() == this.buttonRow4) {
+			label.setText("Button 4");
+			chosenRow = 4;
+		}else if(actionEvent.getSource() == this.buttonRow5) {
+			label.setText("Button 5");
+			chosenRow = 5;
+		}else if(actionEvent.getSource() == this.buttonRow6) {
+			label.setText("Button 6");
+			chosenRow = 6;
+		}
+		
+	}	
+
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartGame.PlayGame"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width=""
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="@id/soughtAfter4"
+        app:layout_constraintStart_toStartOf="@id/soughtAfter1"
+        app:layout_constraintTop_toTopOf="@id/soughtAfter1"
+        app:layout_constraintBottom_toBottomOf="@id/soughtAfter1"
+        app:srcCompat="@drawable/anthrazitBalken"
+        tools:layout_editor_absoluteY="587dp" />
+
+    <ImageView
+        android:id="@+id/soughtAfter1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/soughtAfter2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/white" />
+
+    <ImageView
+        android:id="@+id/soughtAfter2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/soughtAfter3"
+        app:layout_constraintStart_toEndOf="@+id/soughtAfter1"
+        app:srcCompat="@drawable/white" />
+
+    <ImageView
+        android:id="@+id/soughtAfter3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/soughtAfter4"
+        app:layout_constraintStart_toEndOf="@+id/soughtAfter2"
+        app:srcCompat="@drawable/white" />
+
+    <ImageView
+        android:id="@+id/soughtAfter4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/soughtAfter3"
+        app:srcCompat="@drawable/white" />
+
+</android.support.constraint.ConstraintLayout>
