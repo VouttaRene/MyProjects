@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartGame.PlayGame"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorPrimaryDark"
+    tools:context=".StartGame.PlayGame">
 
     <ImageButton
         android:id="@+id/returnButton"
@@ -14,28 +14,26 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:background="@null"
+        android:contentDescription="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_revert"
-        android:contentDescription="@null"/>
+        app:srcCompat="@android:drawable/ic_menu_revert" />
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="380dp"
+        android:layout_width="wrap_content"
         android:layout_height="600dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginBottom="19dp"
         app:layout_constraintBottom_toTopOf="@+id/returnButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_editor_absoluteX="16dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <!--1.Reihe-->
         <TableRow
-            android:layout_width="match_parent"
+            android:id="@+id/firstRow"
+            android:layout_width="wrap_content"
             android:layout_height="56dp">
 
             <ImageView
@@ -44,51 +42,54 @@
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/white" />
+                android:background="@drawable/white"
+                android:contentDescription="@null" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/button1.1"
-                android:layout_width="48dp"
+                android:layout_width="wrap_content"
                 android:layout_height="48dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/red"
-                tools:ignore="MissingConstraints" />
+                android:contentDescription="@null" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/button1.2"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/red"
-                tools:ignore="MissingConstraints" />
+                android:contentDescription="@null"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/button1.3"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/red"
-                tools:ignore="MissingConstraints" />
+                android:contentDescription="@null"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/button1.4"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/red"
-                tools:ignore="MissingConstraints" />
+                android:contentDescription="@null"/>
 
             <ImageView
                 android:id="@+id/sumCorrectColorsAndPlaces1"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/black" />
+                android:background="@drawable/black"
+                android:contentDescription="@null"/>
 
         </TableRow>
 
@@ -525,7 +526,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/white"
-                android:visibility="invisible"/>
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/button9.1"
@@ -570,7 +571,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/black"
-                android:visibility="invisible"/>
+                android:visibility="invisible" />
         </TableRow>
     </TableLayout>
 
