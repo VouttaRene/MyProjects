@@ -4,67 +4,588 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartGame.PlayGame"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorPrimaryDark"
+    tools:context=".StartGame.PlayGame">
 
-    <ImageView
-        android:id="@+id/background"
-        android:layout_width=""
+    <ImageButton
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        app:layout_constraintEnd_toEndOf="@id/soughtAfter4"
-        app:layout_constraintStart_toStartOf="@id/soughtAfter1"
-        app:layout_constraintTop_toTopOf="@id/soughtAfter1"
-        app:layout_constraintBottom_toBottomOf="@id/soughtAfter1"
-        app:srcCompat="@drawable/anthrazitBalken"
-        tools:layout_editor_absoluteY="587dp" />
-
-    <ImageView
-        android:id="@+id/soughtAfter1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/soughtAfter2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/white" />
-
-    <ImageView
-        android:id="@+id/soughtAfter2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/soughtAfter3"
-        app:layout_constraintStart_toEndOf="@+id/soughtAfter1"
-        app:srcCompat="@drawable/white" />
-
-    <ImageView
-        android:id="@+id/soughtAfter3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/soughtAfter4"
-        app:layout_constraintStart_toEndOf="@+id/soughtAfter2"
-        app:srcCompat="@drawable/white" />
-
-    <ImageView
-        android:id="@+id/soughtAfter4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@null"
+        android:contentDescription="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/soughtAfter3"
-        app:srcCompat="@drawable/white" />
+        app:srcCompat="@android:drawable/ic_menu_revert" />
 
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/returnButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--1.Reihe-->
+        <TableRow
+            android:id="@+id/firstRow"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp">
+
+            <ImageView
+                android:id="@+id/sumCorrectColors1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/white"
+                android:contentDescription="@null" />
+
+            <ImageButton
+                android:id="@+id/button1.1"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                android:contentDescription="@null" />
+
+            <ImageButton
+                android:id="@+id/button1.2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                android:contentDescription="@null"/>
+
+            <ImageButton
+                android:id="@+id/button1.3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                android:contentDescription="@null"/>
+
+            <ImageButton
+                android:id="@+id/button1.4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                android:contentDescription="@null"/>
+
+            <ImageView
+                android:id="@+id/sumCorrectColorsAndPlaces1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/black"
+                android:contentDescription="@null"/>
+
+        </TableRow>
+
+        <!--2.Reihe-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/sumCorrectColors2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/white" />
+
+            <Button
+                android:id="@+id/button2.1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button2.2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button2.3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button2.4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/sumCorrectColorsAndPlaces2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/black" />
+        </TableRow>
+
+        <!--3.Reihe-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/sumCorrectColors3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/white" />
+
+            <Button
+                android:id="@+id/button3.1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button3.2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button3.3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button3.4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/sumCorrectColorsAndPlaces3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/black" />
+        </TableRow>
+
+        <!--4. Reihe-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/sumCorrectColors4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/white" />
+
+            <Button
+                android:id="@+id/button4.1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button4.2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button4.3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button4.4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/sumCorrectColorsAndPlaces4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/black" />
+        </TableRow>
+
+        <!--5. Reihe-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/sumCorrectColors5"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/white" />
+
+            <Button
+                android:id="@+id/button5.1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button5.2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button5.3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button5.4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/sumCorrectColorsAndPlaces5"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/black" />
+        </TableRow>
+
+        <!--6. Reihe-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/sumCorrectColors6"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/white" />
+
+            <Button
+                android:id="@+id/button6.1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button6.2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button6.3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button6.4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/sumCorrectColorsAndPlaces6"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/black" />
+        </TableRow>
+
+        <!--7. Reihe-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/sumCorrectColors7"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/white" />
+
+            <Button
+                android:id="@+id/button7.1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button7.2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button7.3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button7.4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/sumCorrectColorsAndPlaces7"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/black" />
+        </TableRow>
+
+        <!--8. Reihe-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/sumCorrectColors8"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/white" />
+
+            <Button
+                android:id="@+id/button8.1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button8.2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button8.3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button8.4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/sumCorrectColorsAndPlaces8"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/black" />
+        </TableRow>
+
+        <!--9. Reihe-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/sumCorrectColors9"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/white"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/button9.1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button9.2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button9.3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button9.4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/sumCorrectColorsAndPlaces9"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/black"
+                android:visibility="invisible" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/buttonSolve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="27dp"
+        android:text="Solve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/returnButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 </android.support.constraint.ConstraintLayout>
